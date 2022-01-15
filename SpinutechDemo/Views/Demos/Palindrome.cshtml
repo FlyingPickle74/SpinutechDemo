@@ -1,0 +1,42 @@
+﻿@using SpinutechDemo.Controllers;
+
+@model PalindromeResultModel
+
+@section PageStyles
+{
+<link rel="stylesheet" href="~/css/Demos/Palindrome.css" asp-append-version="true" />
+}
+
+<h1>Example 6: Palindrome</h1>
+
+<strong>Problem:</strong>
+Please implement a function that checks whether a positive number is a palindrome or not. For
+example, 121 is a palindrome, but 123 is not.
+
+<div id="Palindrome">
+	@using (Html.BeginForm(nameof(DemosController.Palindrome), DemosController.ControllerName, FormMethod.Post))
+	{
+		<div class="fieldWrapper">
+			<input class="valueToCheck" type="text" name="@nameof(PalindromeModel.ValueToCheck)" placeholder="Enter your number here" maxlength="@int.MaxValue.ToString().Length - 1" />
+			<input type="submit" value="Submit" />
+		</div>
+	}
+
+	@if (Model != null)
+	{
+		<div id="PalindromeResult" class="@Model.CssClass">
+			<p>
+				You entered: <strong>@Model.LastValue</strong>
+			</p>
+			<p>
+				@Model.Result
+			</p>
+		</div>
+	}
+</div>
+
+<script type="text/javascript">
+	window.onload = () => {
+		$("input.valueToCheck").focus();
+	}
+</script>

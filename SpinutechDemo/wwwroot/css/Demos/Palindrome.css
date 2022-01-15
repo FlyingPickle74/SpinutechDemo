@@ -1,0 +1,46 @@
+﻿#Palindrome {
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px;
+  max-width: 300px;
+  border: 1px solid black;
+}
+#Palindrome form .fieldWrapper {
+  display: block;
+}
+#Palindrome form .fieldWrapper input[type=text] {
+  margin-bottom: 10px;
+}
+#Palindrome form .fieldWrapper input {
+  width: 100%;
+}
+#Palindrome #PalindromeResult {
+  border: 1px solid black;
+  padding: 10px;
+  margin-top: 10px;
+}
+#Palindrome #PalindromeResult.error {
+  border-color: red;
+  background-color: rgba(255, 0, 0, 0.3);
+}
+#Palindrome #PalindromeResult.success {
+  border-color: green;
+  background-color: rgba(0, 255, 0, 0.3);
+}
+
+@media screen and (min-width: 600px) {
+  #Palindrome {
+    max-width: 600px;
+  }
+  #Palindrome form .fieldWrapper {
+    display: flex;
+  }
+  #Palindrome form .fieldWrapper input[type=text] {
+    width: 100%;
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+  #Palindrome form .fieldWrapper input[type=submit] {
+    width: auto;
+  }
+}
