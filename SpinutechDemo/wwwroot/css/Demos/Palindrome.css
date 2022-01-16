@@ -2,7 +2,7 @@
   width: 100%;
   margin: 10px auto;
   padding: 10px;
-  max-width: 300px;
+  max-width: 480px;
   border: 1px solid black;
 }
 #Palindrome form .fieldWrapper {
@@ -10,6 +10,7 @@
 }
 #Palindrome form .fieldWrapper input[type=text] {
   margin-bottom: 10px;
+  text-align: center;
 }
 #Palindrome form .fieldWrapper input {
   width: 100%;
@@ -28,9 +29,9 @@
   background-color: rgba(0, 255, 0, 0.3);
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
   #Palindrome {
-    max-width: 600px;
+    max-width: 768px;
   }
   #Palindrome form .fieldWrapper {
     display: flex;
@@ -39,6 +40,7 @@
     width: 100%;
     margin-right: 10px;
     margin-bottom: 0;
+    text-align: left;
   }
   #Palindrome form .fieldWrapper input[type=submit] {
     width: auto;

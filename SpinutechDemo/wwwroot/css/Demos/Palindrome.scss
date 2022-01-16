@@ -1,10 +1,12 @@
-﻿$spacingPx: 10px;
+﻿@import "../Globals.scss";
+
+$spacingPx: 10px;
 
 #Palindrome {
 	width: 100%;
 	margin: $spacingPx auto;
 	padding: $spacingPx;
-	max-width: 300px;
+	max-width: $tabletWidth;
 	border: 1px solid black;
 
 	form .fieldWrapper {
@@ -12,6 +14,7 @@
 
 		input[type=text] {
 			margin-bottom: $spacingPx;
+			text-align: center;
 		}
 
 		input {
@@ -36,9 +39,9 @@
 	}
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: $laptopWidth) {
 	#Palindrome {
-		max-width: 600px;
+		max-width: $laptopWidth;
 
 		form .fieldWrapper {
 			display: flex;
@@ -47,6 +50,7 @@
 				width: 100%;
 				margin-right: $spacingPx;
 				margin-bottom: 0;
+				text-align: left;
 			}
 
 			input[type=submit] {
